@@ -1,0 +1,41 @@
+.item-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .item-table th,
+  .item-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .item-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .action-icon {
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .material-icons {
+    font-size: 18px;
+    vertical-align: middle;
+  }
+  .add-button {
+    float: right;
+    margin-bottom: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .add-button i {
+    margin-right: 4px;
+  }
+  

@@ -1,0 +1,45 @@
+<form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+  <label>S.No:</label>
+  <input type="text" formControlName="s.no">
+  <div *ngIf="itemForm.get('s.no')?.hasError('required') && itemForm.get('s.no')?.touched">
+    S.no is required.
+  </div>
+
+  <label>Name:</label>
+  <input type="text" formControlName="name">
+  <div *ngIf="itemForm.get('name')?.hasError('required') && itemForm.get('name')?.touched">
+    Name is required.
+  </div>
+
+  <label>Email:</label>
+  <input type="email" formControlName="email">
+  <div *ngIf="itemForm.get('email')?.hasError('required') && itemForm.get('email')?.touched">
+    Email is required.
+  </div>
+  <div *ngIf="itemForm.get('email')?.hasError('email') && itemForm.get('email')?.touched">
+    Invalid email format.
+  </div>
+
+  <label>Gender:</label>
+  <input type="text" formControlName="gender">
+  <div *ngIf="itemForm.get('gender')?.hasError('required') && itemForm.get('gender')?.touched">
+    Gender is required.
+  </div>
+
+  <label>Age:</label>
+  <input type="text" formControlName="age">
+  <div *ngIf="itemForm.get('age')?.hasError('required') && itemForm.get('age')?.touched">
+    Age is required.
+  </div>
+
+  <label>City:</label>
+  <input type="text" formControlName="city">
+  <div *ngIf="itemForm.get('city')?.hasError('required') && itemForm.get('city')?.touched">
+    City is required.
+  </div>
+
+
+  <button type="submit" [disabled]="itemForm.invalid">Add Item</button>
+</form>
+<div class="success-message" *ngIf="successMessage">{{ successMessage }}</div>
+<div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>

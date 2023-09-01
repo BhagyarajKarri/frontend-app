@@ -1,0 +1,37 @@
+<div>
+    <button class="add-button" (click)="addItem()">
+      <i class="material-icons">add</i> Add Item
+    </button>
+  </div>
+<table class="item-table">
+    <thead>
+      <tr>
+        <th>S.No(Excel)</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <td>{{ item['s.no'] }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.gender }}</td>
+        <td>{{ item.age }}</td>
+        <td>{{ item.city }}</td>
+        <td>
+          <span class="action-icon" (click)="editItem(item)">
+            <i class="material-icons">edit</i>
+          </span>
+          <span class="action-icon" (click)="deleteItem(item)">
+            <i class="material-icons">delete</i>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
